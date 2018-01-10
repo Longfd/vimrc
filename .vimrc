@@ -1,3 +1,4 @@
+" Reference Linking https://github.com/tao12345666333/vim/blob/master/README-zh.md
 " Default Setting
 set nocompatible 
 set history=50 
