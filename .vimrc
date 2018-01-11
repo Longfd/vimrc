@@ -55,7 +55,7 @@ nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Ctags
-set tags=/home/longfeida/systags/tags;
+set tags=/home/longfeida/systags/tags
 set autochdir
 
 " NerdTree
