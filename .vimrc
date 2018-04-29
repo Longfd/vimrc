@@ -1,3 +1,66 @@
+
+scriptencoding utf-8
+" ============================================================================
+" Author: LongFeida
+" Version: v1.0.0.1
+" Update Time: 2018-04-29
+
+" ============================================================================
+" Vundle initialization
+" Avoid modify this section, unless you are very sure of what you are doing
+
+" no vi-compatible
+set nocompatible
+
+" Setting up Vundle - the best vim plugin manager
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+    echo "Installing Vundle..."
+    echo ""
+    silent !mkdir -p ~/.vim/bundle
+    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
+    let iCanHazVundle=0
+endif
+
+filetype off
+set nocompatible                " be iMproved
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Plugins
+Plugin 'gmarik/vundle'
+
+" ============================================================================
+" Active plugins
+" You can disable or add new ones here:
+
+" Plugins from github repos:
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tomasr/molokai'
+Plugin 'vim-scripts/ctags.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
+
+" ============================================================================
+" Install plugins the first time vim runs
+
+if iCanHazVundle == 0
+    echo "Installing Plugins, please ignore key map error messages"
+    echo ""
+    :PluginInstall
+endif
+
+" ============================================================================
+" Vim settings and mappings
+" You can edit them as you wish
+
+" allow plugins by file type (required for plugins!)
+filetype plugin indent on
+
 " Default Setting
 set nocompatible 
 set history=50 
@@ -29,19 +92,10 @@ filetype off                    " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle
-Plugin 'gmarik/vundle'
-" original repos on github
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'tomasr/molokai'
-Plugin 'vim-scripts/ctags.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
 
-filetype plugin indent on
+ ============================================================================
+" Plugins settings and mappings
+" Edit them as you wish.
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'  "设置全局配置文件的路径
