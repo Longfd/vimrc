@@ -1,5 +1,3 @@
-
-scriptencoding utf-8
 " ============================================================================
 " Author: LongFeida
 " Version: v1.0.0.1
@@ -24,7 +22,6 @@ if !filereadable(vundle_readme)
 endif
 
 filetype off
-set nocompatible                " be iMproved
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -36,7 +33,7 @@ Plugin 'gmarik/vundle'
 " You can disable or add new ones here:
 
 " Plugins from github repos:
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'tomasr/molokai'
 Plugin 'vim-scripts/ctags.vim'
 Plugin 'kien/ctrlp.vim'
@@ -62,7 +59,6 @@ endif
 filetype plugin indent on
 
 " Default Setting
-set nocompatible 
 set history=50 
 set fileencodings=ucs-bom,utf-8,gbk2312,gbk,cp936
 set fileencoding=utf-8
@@ -93,22 +89,22 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 
- ============================================================================
+"============================================================================
 " Plugins settings and mappings
 " Edit them as you wish.
 
 " YouCompleteMe
-let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'  "设置全局配置文件的路径
-let g:ycm_seed_identifiers_with_syntax=1    " 语法关键字补全
-let g:ycm_confirm_extra_conf=0  " 打开vim时不再询问是否加载ycm_extra_conf.py配置
-let g:ycm_key_invoke_completion = '<C-a>' " ctrl + a 触发补全
-set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
-nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'  "设置全局配置文件的路径
+"let g:ycm_seed_identifiers_with_syntax=1    " 语法关键字补全
+"let g:ycm_confirm_extra_conf=0  " 打开vim时不再询问是否加载ycm_extra_conf.py配置
+"let g:ycm_key_invoke_completion = '<C-a>' " ctrl + a 触发补全
+"set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+"nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+"nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+"nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Ctags
-set tags=/home/longfeida/systags/tags
+"set tags=/home/longfeida/systags/tags
 set autochdir
 
 " NerdTree
